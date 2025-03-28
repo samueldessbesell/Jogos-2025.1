@@ -34,7 +34,8 @@ void exibirPontuacao(char nomes[2][20], int pontuacao[2]) {
 
 void exibirCaixasDisponiveis(int caixasEscolhidas[5]) {
     printf(BLUE "\nCaixas disponíveis: " RESET);
-    for (int i = 0; i < 5; i++) {
+    int i;
+    for (i = 0; i < 5; i++) {
         if (!caixasEscolhidas[i]) {
             printf(GREEN "%d " RESET, i + 1);
         }
@@ -52,6 +53,7 @@ int main() {
    
     srand(time(NULL));
    
+    system("cls");
     printf(YELLOW "\nBem-vindo ao Cobra na Caixa!\n" RESET);
     printf("Jogador 1, digite seu nome: ");
     scanf("%s", nomes[0]);
@@ -122,19 +124,12 @@ int main() {
         exibirPontuacao(nomes, pontuacao);
         system("pause");
        
-        do {
-            system("cls");
-            printf("\nDesejam jogar novamente, %s e %s? (1 - Sim / 0 - Não): ", nomes[0], nomes[1]);
-            scanf("%d", &continuar);
-            fflush(stdin);
-           
-            if (continuar != 1 && continuar != 0) {
-                printf(RED "Escolha inválida. Digite 1 para sim ou 0 para não.\n" RESET);
-                system("pause");
-            }
-        } while (continuar != 1 && continuar != 0);
+		system("cls");
+		printf("\nDesejam jogar novamente, %s e %s? (Qualquer tecla - Sim / 0 - Não): ", nomes[0], nomes[1]);
+		scanf("%d", &continuar);
+		fflush(stdin);
        
-    } while (continuar);
+    } while (continuar != 0);
    
     printf(YELLOW "\nFim do jogo! Pontuação Final:\n" RESET);
     printf(GREEN "%s: %d vitórias\n" RESET, nomes[0], pontuacao[0]);
