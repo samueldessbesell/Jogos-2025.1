@@ -1,2 +1,217 @@
 #include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <time.h>
+int main(){
+	setlocale(LC_ALL,"");
+	//crie um jogo de perguntas e respostas tendo como imput a entrada de numeros de 'A' a 'D' como como seleção de respostas
+	
+	char letra, resp;
+	int escolhajogo,menu;
+	int frequencias[] = {659, 659, 659, 523, 659, 784, 392}; // Frequências em Hz
+    int duracoes[] = {200, 200, 200, 200, 200, 400, 400};   // Durações em milissegundos
+    int i;
+    srand(time(NULL));
+	int r=rand()%10;
+	int qtot=0;
+
+	int q1=0,q2=0,q3=0,q4=0,q5=0,q6=0,q7=0,q8=0,q9=0,q10=0;
+   
+	
+	printf("selecione o jogo \n 1.jogo do milhao  \n 2. caixa na cobra \n 3.gosman war\n");//tela inicial
+	scanf("%d",&escolhajogo);
+
+	if(escolhajogo==1){
+		do{
+			
+			
+		printf("seja bem vindo ao jogo do milhão do SBT MA ÔE\n você quer jogar s/n ");
+		fflush(stdin);
+		scanf("%c",&letra);
+			if(letra=='s'||letra=='S'){
+				
+				if(r==0){
+					
+					
+					if(q1==1){
+						continue;
+					}
+					
+				printf("qual e a soma de 1+1 MA ÔE\n a:2                  b:3\n c:5                  d:6\n");
+				fflush(stdin);
+				scanf("%c",&resp);
+
+					if(resp== 'a'){
+						for (i = 0; i < 7; i++){
+  						Beep(frequencias[i], duracoes[i]);
+        				Sleep(20);
+						}
+						printf("acertou miseravi MA ÔE ");
+				
+					}
+					else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+						printf("perdeste a rodada");
+					}
+					
+				else{
+					printf("para de testar o codigo");
+				}
+				}
+				else if(r==1){
+					
+					
+						if(q1==1){
+							continue;
+						}
+						
+					printf("questao 2");
+					fflush(stdin);
+					scanf("%c",&resp);
+	
+						if(resp== 'a'){
+							for (i = 0; i < 7; i++){
+	  						Beep(frequencias[i], duracoes[i]);
+	        				Sleep(20);
+							}
+							printf("acertou miseravi MA ÔE ");
+					
+						}
+						else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+							printf("perdeste a rodada");
+						}
+						
+					else{
+						printf("para de testar o codigo");
+					}
+					
+				}
+					else if(r==2){
+						
+						
+						
+						if(q2==1){
+						continue;
+					}
+					
+				printf("questao 2");
+				fflush(stdin);
+				scanf("%c",&resp);
+
+					if(resp== 'a'){
+						for (i = 0; i < 7; i++){
+  						Beep(frequencias[i], duracoes[i]);
+        				Sleep(20);
+						}
+						printf("acertou miseravi MA ÔE ");
+				
+					}
+					else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+						printf("perdeste a rodada");
+					}
+					
+				else{
+					printf("para de testar o codigo");
+				}
+					}
+						else if(r==3){
+							
+							
+							
+							if(q3==1){
+							continue;
+					}
+					
+				printf("questao 3");
+				fflush(stdin);
+				scanf("%c",&resp);
+
+					if(resp== 'a'){
+						for (i = 0; i < 7; i++){
+  						Beep(frequencias[i], duracoes[i]);
+        				Sleep(20);
+						}
+						printf("acertou miseravi MA ÔE ");
+				
+					}
+					else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+						printf("perdeste a rodada");
+					}
+					
+				else{
+					printf("para de testar o codigo");
+				}
+						}
+							else if(r==4){
+								
+								
+								
+								if(q4==1){
+									continue;
+								}
+								
+								printf("questao 4");
+								fflush(stdin);
+								scanf("%c",&resp);
+			
+								if(resp== 'a'){
+									for (i = 0; i < 7; i++){
+			  						Beep(frequencias[i], duracoes[i]);
+			        				Sleep(20);
+									}
+									printf("acertou miseravi MA ÔE ");
+							
+								}
+								else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+									printf("perdeste a rodada");
+								}
+								
+								else{
+								printf("para de testar o codigo");
+							}
+							}
+								else if(r==5){
+									
+									
+									
+									
+									if(q5==1){
+										continue;
+									}
+									
+								printf("questao 5");
+								fflush(stdin);
+								scanf("%c",&resp);
+				
+									if(resp== 'a'){
+										for (i = 0; i < 7; i++){
+				  						Beep(frequencias[i], duracoes[i]);
+				        				Sleep(20);
+										}
+										printf("acertou miseravi MA ÔE ");
+								
+									}
+									else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+										printf("perdeste a rodada");
+									}
+									
+								else{
+									printf("para de testar o codigo");
+								}
+								}
+									
+				}
+		}
+		while(qtot<=5);
+	}
+	else if(escolhajogo==2){
+	printf("jogo em desenvolvimento WIP");
+	}
+	else if(escolhajogo==3){
+	printf("jogo em desenvolvimento WIP");
+	}
+	else{
+	}
+	return r;
+}
 
