@@ -13,8 +13,9 @@ int main(){
     int duracoes[] = {200, 200, 200, 200, 200, 400, 400};   // Durações em milissegundos
     int i;
     srand(time(NULL));
-	int r=rand()%5;
+	int r=rand()%6;
 	int qtota=0;
+	int quant_acerto=0;
 	
 
 	int q0=0,q1=0,q2=0,q3=0,q4=0,q5=0;
@@ -24,15 +25,17 @@ int main(){
 	scanf("%d",&escolhajogo);
 
 	if(escolhajogo==1){
+		printf("seja bem vindo ao jogo do milhão do SBT MA ÔE\n você quer jogar s/n ");
+		fflush(stdin);
+		scanf("%c/n",&letra);
 		while(qtota<=5){
 			
 			
-		printf("seja bem vindo ao jogo do milhão do SBT MA ÔE\n você quer jogar s/n ");
-		fflush(stdin);
-		int r=rand()%5;
+		
+		int r=rand()%6;
 		
 		
-		scanf("%c",&letra);
+		
 			if(letra=='s'||letra=='S'){
 				
 				if(r==0){
@@ -45,9 +48,10 @@ int main(){
 						
 					
 					
-					printf("qual e a soma de 1+1 MA ÔE\n a:2                  b:3\n c:5                  d:6\n");
+					printf("Em que estado brasileiro nasceu a apresentadora Xuxa?\n");
+					printf("\n a:RIO DE JANEIRO 		b:RIO GRANDE DO SUL\n c:SANTA CATARINA 		d:GOIÁS\n");
 					fflush(stdin);
-					scanf("%c",&resp);
+					scanf("%c/n",&resp);
 
 						if(resp== 'a'){
 							for (i = 0; i < 7; i++){
@@ -69,6 +73,7 @@ int main(){
 					
 								else{
 									printf("para de testar o codigo");
+									
 								}
 					}
 				}
@@ -80,21 +85,22 @@ int main(){
 							continue;
 						}
 						else{
-							printf("questao 2");
+							printf("Qual é o nome dado ao estadoda água em forma de gelo?\n");
+							printf("a:LÍQUIDO 		b:SÓLIDO\nc:GASOSO 		d:VAPOROSO");
 							fflush(stdin);
-							scanf("%c",&resp);
+							scanf("%c/n",&resp);
 			
-								if(resp== 'a'){
+								if(resp== 'b'||resp=='B'){
 									for (i = 0; i < 7; i++){
 			  						Beep(frequencias[i], duracoes[i]);
 			        				Sleep(20);
 									}
 									printf("acertou miseravi MA ÔE ");
-							
+									quant_acerto++;
 									qtota++;
 									q1++;
 								}
-									else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+									else if(resp=='a'||resp=='A'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
 										printf("perdeste a rodada");
 										qtota++;
 										q1++;
@@ -115,18 +121,19 @@ int main(){
 						}
 					
 						else{
-						printf("questao 3");
+						printf("Qual é o personagem do folclore brasileiro que tem uma perna só?\n");
+						printf("a: CUCA 		b: NEGRINHO DO PASTOREIO\nc: BOITATÁ 		d: SACI-PERERÊ");
 						fflush(stdin);
-						scanf("%c",&resp);
+						scanf("%c/n",&resp);
 	
-							if(resp== 'a'){
+							if(resp== 'd'||resp=='D'){
 								for (i = 0; i < 7; i++){
 		  						Beep(frequencias[i], duracoes[i]);
 		        				Sleep(20);
 								}
 								printf("acertou miseravi MA ÔE ");
-								
-								
+
+								quant_acerto++;
 								qtota++;
 								q2++;
 							}
@@ -151,17 +158,18 @@ int main(){
 							}
 								else{
 									
-								printf("questao 4");
+								printf("Quem fundou a fábrica de automóveis Ford?\n");
+								printf("a:HARRISON FORD 		b:GERALD FORD\nc:HENRY FORD 			d:ANNA FORD");
 								fflush(stdin);
-								scanf("%c",&resp);
+								scanf("%c/n",&resp);
 		
-									if(resp== 'a'){
+									if(resp== 'a'||resp=='A'){
 										for (i = 0; i < 7; i++){
 				  						Beep(frequencias[i], duracoes[i]);
 				        				Sleep(20);
 										}
 										printf("acertou miseravi MA ÔE ");
-								
+										quant_acerto++;
 										qtota++;
 										q3++;
 									}
@@ -173,8 +181,7 @@ int main(){
 							
 											else{
 												printf("para de testar o codigo");
-												qtota++;
-												q3++;
+												
 											}
 								}
 						}
@@ -187,20 +194,22 @@ int main(){
 								}
 								else{
 									
-								printf("questao 5");
+								printf("Qual é a cor que se associa com os grupos ecológicos?\n");
+								printf("a:PRETA 		b:VERMELHA\nc:AZUL 			d:VERDE");
 								fflush(stdin);
-								scanf("%c",&resp);
+								scanf("%c/n",&resp);
 			
-									if(resp== 'a'){
+									if(resp== 'd'||resp=='D'){
 										for (i = 0; i < 7; i++){
 				  						Beep(frequencias[i], duracoes[i]);
 				        				Sleep(20);
 										}
 									printf("acertou miseravi MA ÔE ");
+									quant_acerto++;
 									qtota++;
 									q4++;
 									}
-										else if(resp=='b'||resp=='B'||resp=='C'||resp=='D'|| resp=='c'||resp=='d'){
+										else if(resp=='b'||resp=='B'||resp=='C'||resp=='A'|| resp=='c'||resp=='a'){
 											printf("perdeste a rodada");
 											qtota++;
 											q4++;
@@ -208,8 +217,7 @@ int main(){
 								
 											else{
 											printf("para de testar o codigo");
-											qtota++;
-											q4++;
+											
 											}
 							}
 							}
@@ -221,16 +229,18 @@ int main(){
 									}
 									
 									else{
-									printf("questao 6");
+									printf("Qual ser mitológico possui o corpo metade mulher e metade peixe?\n");
+									printf("a:SEREIA 		b:MEDUSA \nc:CLEÓPATRA 		d:SERENA");
 									fflush(stdin);
-									scanf("%c",&resp);
+									scanf("%c/n",&resp);
 				
 										if(resp== 'a'){
 											for (i = 0; i < 7; i++){
 					  						Beep(frequencias[i], duracoes[i]);
 					        				Sleep(20);
 											}
-											printf("acertou miseravi MA ÔE ");
+											printf("acertou miseravi MA ÔE ");\
+											quant_acerto++;
 											qtota++;
 											q5++;
 										}
@@ -242,8 +252,7 @@ int main(){
 									
 												else{
 													printf("para de testar o codigo");
-													qtota++;
-													q5++;
+													
 												}
 									}
 								}
@@ -255,7 +264,7 @@ int main(){
 					break;
 				}
 		}
-			
+		printf("Quantidade de Acertos %d/5",quant_acerto);	
 			
 			
 	}
