@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <time.h>
-int main(){
+int main(){ //ele está um pouco desatualizado em relação ao código oficial em "Menu de Jogos".
 	setlocale(LC_ALL,"");
 	//crie um jogo de perguntas e respostas tendo como imput a entrada de numeros de 'A' a 'D' como como seleção de respostas
 	
