@@ -43,7 +43,7 @@ void exibirCaixasDisponiveis(int caixasEscolhidas[5]) {
     printf("\n");
 }
 
-int main() {
+int main() { //ele está um pouco desatualizado em relação ao código oficial em "Menu de Jogos".
     setlocale(LC_ALL, "");
     int caixaBotao, caixaCobra, escolha, jogadorAtual, continuar;
     int caixasEscolhidas[5];
