@@ -58,3 +58,49 @@ A avaliação do projeto será realizada conforme os seguintes critérios:
 
 **Observação:** Caso tenham sido utilizados trechos de código de outras fontes (por exemplo, Stack Overflow, ChatGPT, etc.), os alunos deverão referenciá-los no arquivo README do GitHub. Além disso, deverão apresentar a conversa com a IA durante a defesa do projeto para demonstrar como a ferramenta foi utilizada no desenvolvimento.
 
+
+"Claro! Vou criar um código em C que reproduz o famoso "MA-OE" do Silvio Santos usando a função Beep no Windows. A função Beep permite gerar tons de diferentes frequências e durações.
+
+Aqui está o código:
+
+#include <windows.h>
+
+int main() {
+    // Frequências e durações para "MA-OE"
+    int frequencias[] = {659, 659, 659, 523, 659, 784, 392}; // Frequências em Hz
+    int duracoes[] = {200, 200, 200, 200, 200, 400, 400};   // Durações em milissegundos
+
+    // Reproduzindo a sequência de tons
+    for (int i = 0; i < 7; i++) {
+        Beep(frequencias[i], duracoes[i]);
+        Sleep(50); // Pequena pausa entre os tons
+    }
+
+    return 0;
+}
+
+
+Explicação:
+Frequências: As frequências foram escolhidas para se assemelharem ao som do "MA-OE" do Silvio Santos.
+Durações: As durações foram ajustadas para que cada tom tenha a duração correta.
+Beep: A função Beep é usada para gerar o som com a frequência e duração especificadas.
+Sleep: A função Sleep é usada para adicionar uma pequena pausa entre os tons.
+
+Como compilar e executar:
+Salve o código em um arquivo com extensão .c, por exemplo, maoe.c.
+Compile o código usando um compilador C, como o gcc:
+gcc maoe.c -o maoe.exe
+Execute o programa gerado:
+./maoe.exe
+
+Observação:
+Este código é específico para sistemas Windows, pois a função Beep é uma API do Windows. Se você estiver usando outro sistema operacional, precisará de uma abordagem diferente para gerar sons.
+
+Espero que você goste do "MA-OE" em C! 😊
+por favor faça um codigo de Beep em C com o maôe do silvio santos"
+
+https://chatgpt.com/share/67ef47bf-f568-800d-95e4-5482378076b1
+
+https://chatgpt.com/share/67ef48d8-e764-800d-ac00-e4f29628a851
+
+https://chatgpt.com/share/67ef496a-6860-800d-a770-971aeea35aa2
